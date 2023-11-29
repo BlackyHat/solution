@@ -1,17 +1,20 @@
-import css from './Header.module.css';
-import Logo from '../../assets/logo.svg?react';
+import Logo from '../Logo/Logo';
+import scss from './Header.module.scss';
 
 const Header = () => {
   return (
-    <div className={css.header}>
-      <Logo className={css.headerLogo} aria-label="Eco Solution Logo" />
-      <nav className={css.nav}>
-        <ul className={css.navList}>
+    <div className={scss.header}>
+      <Logo />
+      <nav>
+        <ul className={scss.navList}>
           <li>
-            <button></button>
+            <button className={scss.btnMenu} />
           </li>
           <li>
-            <button type="button">Get in touch</button>
+            <button type="button" className={scss.btnContact}>
+              Get in touch
+              <span className={scss.arrowIcon} aria-label="Arrow down" />
+            </button>
           </li>
         </ul>
       </nav>

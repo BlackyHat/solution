@@ -1,0 +1,68 @@
+@import '@/sass/button.scss';
+
+.footer {
+  border-top: 1px solid var(--primary-color);
+  padding-top: 40px;
+}
+.socialList {
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.logoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.arrowUp {
+  @extend .btn;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+
+  & > svg {
+    transform: rotate(180deg);
+    width: 16px;
+    height: 16px;
+
+    & > path {
+      stroke: currentColor;
+    }
+  }
+}
+.socialList {
+  margin-bottom: 24px;
+}
+.socialLink {
+  @extend .btn;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-white-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color);
+  }
+}
+.addressList {
+  & > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  & p {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+}

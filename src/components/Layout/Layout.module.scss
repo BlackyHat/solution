@@ -1,0 +1,24 @@
+.container {
+  margin: 0 auto;
+  background-color: var(--primary-white-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 36px 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 1440px;
+    padding: 0 100px;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+}

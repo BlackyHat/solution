@@ -1,0 +1,96 @@
+@import '@/sass/button.scss';
+
+.form {
+  padding: 36px 12px;
+  background-color: #eaedf1;
+
+  & input,
+  & textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    outline: none;
+    padding: 8px 0;
+    color: var(--secondary-color);
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    background-color: transparent;
+    margin-bottom: 28px;
+    &[aria-invalid='true'] {
+      border-bottom: 1px solid var(--error-color);
+    }
+    &::placeholder {
+      color: var(--secondary-color);
+    }
+  }
+  & textarea {
+    margin-bottom: 16px;
+    resize: none;
+    max-height: 147px;
+  }
+
+  & label {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    position: relative;
+    padding-left: 10px;
+    display: block;
+    &::after {
+      content: '*';
+      position: absolute;
+      left: 0;
+    }
+  }
+  & p[role='alert'] {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+    color: var(--error-color);
+    font-family: Fira Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    text-align: right;
+  }
+
+  & > button {
+    @extend .btn;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    padding-right: 48px;
+    position: relative;
+  }
+}
+.arrowIcon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: rotate(-90deg);
+  transition: background-color linear 250ms;
+  background-image: url(@assets/arrow2.svg?react);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+.errorMsg {
+}

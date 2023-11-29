@@ -1,0 +1,56 @@
+.accordionItem {
+  margin-bottom: 16px;
+}
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color linear 250ms;
+  margin-bottom: 16px;
+  position: relative;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.accordionTitle {
+  margin-top: 16px;
+  font-family: Fira Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.04em;
+  text-align: justify;
+  padding-left: 24px;
+}
+.accordionInfo {
+  font-family: Fira Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: -0.04em;
+  text-align: justify;
+  padding-left: 24px;
+}
+
+.iconMinus {
+  & > path {
+    fill: currentColor;
+  }
+}
+.iconPlus {
+  & > path {
+    fill: var(--primary-color);
+  }
+}
+
+.iconMinus,
+.iconPlus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  width: 16px;
+  height: 16px;
+}

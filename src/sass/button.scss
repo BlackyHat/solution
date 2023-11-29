@@ -1,0 +1,23 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.04em;
+  font-family: inherit;
+  transition: color 250ms linear, background-color 250ms linear;
+  cursor: pointer;
+  border-radius: 500px;
+  padding: 10px 16px;
+  border: none;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+}

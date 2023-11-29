@@ -1,0 +1,84 @@
+.section {
+  padding: 36px 0 24px;
+}
+.sectionTitle {
+  font-family: Oswald;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.contactLabel {
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.contactIcon {
+  width: 24px;
+  height: 24px;
+  & > path {
+    stroke: var(--secondary-color);
+  }
+}
+.contactList {
+  & > li {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+.phoneList {
+  & > li {
+    display: flex;
+    gap: 8px;
+    & > p {
+      font-family: Fira Sans;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.04em;
+      text-align: left;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+.labelWrapper {
+  display: flex;
+  gap: 8px;
+  & > p {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    text-align: left;
+  }
+}
+.socialList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+
+  & > svg {
+    width: 24px;
+    height: 24px;
+  }
+}

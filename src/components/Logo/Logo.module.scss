@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+
+  .label {
+    fill: currentColor;
+    transition: fill linear 250ms;
+    width: 170px;
+    height: 25px;
+  }
+
+  &:hover .label,
+  &:focus .label {
+    fill: var(--primary-color);
+  }
+}

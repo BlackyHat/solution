@@ -1,0 +1,68 @@
+@import '@/sass/button.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 36px 0 146px;
+}
+
+.navList {
+  list-style: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.btnContact {
+  @extend .btn;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  &:hover .arrowIcon,
+  &:focus .arrowIcon {
+    background-color: var(--primary-color);
+  }
+}
+.btnMenu {
+  @extend .btn;
+  background-color: var(--button-secondary-color);
+  border-radius: 50%;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  background-image: url(@assets/menu.svg?react);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color);
+  }
+
+  &:hover .menuIcon,
+  &:focus .menuIcon {
+    background-color: var(--primary-color);
+  }
+}
+
+.menuIcon {
+  width: 16px;
+  height: 16px;
+  transition: background-color linear 250ms;
+}
+
+.arrowIcon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  transition: background-color linear 250ms;
+  background-image: url(@assets/arrow2.svg?react);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 8px 9px;
+}

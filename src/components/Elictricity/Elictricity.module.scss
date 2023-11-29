@@ -1,0 +1,41 @@
+.section {
+  padding-bottom: 36px;
+}
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.separator {
+  background-color: var(--primary-color);
+  width: 1px;
+  height: 48px;
+  margin: 0 auto 24px;
+}
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: Oswald;
+  color: var(--primary-color);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.units {
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--secondary-color);
+}

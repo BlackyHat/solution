@@ -1,0 +1,40 @@
+@import '@/sass/button.scss';
+.actionBtns {
+  display: flex;
+  gap: 12px;
+}
+.actionsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.actionBtnPrev,
+.actionBtnNext {
+  @extend .btn;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  transition: background-color linear 250ms;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  background-color: var(--primary-white-color);
+  &:hover .btnIcon,
+  &:focus .btnIcon {
+    > path {
+      stroke: var(--primary-color);
+    }
+  }
+}
+.btnIcon {
+  width: 28px;
+  height: 28px;
+  > path {
+    transition: stroke linear 250ms;
+  }
+}
+.actionBtnNext {
+  transform: rotate(-90deg);
+}

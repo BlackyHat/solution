@@ -1,0 +1,59 @@
+.section {
+  text-align: center;
+  padding: 24px 0 36px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  word-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.sectionInfo {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.04em;
+  word-spacing: 0.04em;
+  text-align: justify;
+  margin-bottom: 36px;
+}
+
+.valuesList {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.valuesItem {
+  background-color: #eaedf1;
+  padding: 12px;
+}
+.valuesItemTitleWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+  // padding: 12px;
+}
+.valuesItemTitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.valuesItemInfo {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: -0.04em;
+  text-align: justify;
+}
