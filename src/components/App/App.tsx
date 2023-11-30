@@ -1,11 +1,10 @@
-import About from '../About/About';
-import Cases from '../Cases/Cases';
-import ContactUs from '../ContactUs/ContactUs';
-import Elictricity from '../Elictricity/Elictricity';
-import FrequentlyQuestions from '../FrequentlyQuestions/FrequentlyQuestions';
-import Layout from '../Layout/Layout';
-import Main from '../Main/Main';
-import Separator from '../ui/Separator/Separator';
+import Layout from '@components/Layout/Layout';
+import Main from '@components/Main/Main';
+import About from '@components/About/About';
+import Cases from '@components/Cases/Cases';
+import Elictricity from '@components/Elictricity/Elictricity';
+import ContactUs from '@components/ContactUs/ContactUs';
+import FAQs from '@components/FAQs/FAQs';
 
 function App() {
   return (
@@ -14,9 +13,8 @@ function App() {
       <About />
       <Elictricity />
       <Cases />
-      <FrequentlyQuestions />
+      <FAQs />
       <ContactUs />
-      <Separator />
     </Layout>
   );
 }

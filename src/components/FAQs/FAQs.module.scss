@@ -1,0 +1,40 @@
+@import '@/sass/button.scss';
+@import '@/sass/sectionTitle.scss';
+.section {
+  padding-bottom: 36px;
+}
+.sectionTitle {
+  @extend .sectionTitle;
+}
+.accordeonList {
+  margin-bottom: 36px;
+}
+.moreInfo {
+  font-family: Fira Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.04em;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.btnContact {
+  @extend .btn;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+
+  &:hover .arrowIcon,
+  &:focus .arrowIcon {
+    background-color: var(--primary-color);
+  }
+}
+.arrowIcon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: var(--secondary-color);
+  transition: background-color var(--transition);
+}

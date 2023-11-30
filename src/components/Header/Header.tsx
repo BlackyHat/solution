@@ -1,7 +1,10 @@
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
-import Logo from '../Logo/Logo';
-import scss from './Header.module.scss';
 import { useState } from 'react';
+
+import BurgerMenu from '@components/BurgerMenu/BurgerMenu';
+import Logo from '@components/Logo/Logo';
+import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
+
+import scss from './Header.module.scss';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +23,7 @@ const Header = () => {
             <li>
               <button type="button" className={scss.btnContact}>
                 Get in touch
-                <span className={scss.arrowIcon} aria-label="Arrow down" />
+                <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
               </button>
             </li>
           </ul>

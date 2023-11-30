@@ -1,8 +1,9 @@
-import scss from './Slide.module.scss';
-import ButtonIcon from '@assets/arrow2.svg?react';
-import Separator from '@/components/ui/Separator/Separator';
-import ResponsiveImg from '@/components/ui/ResponsiveImg';
 import { FC } from 'react';
+import ResponsiveImg from '@/components/ui/ResponsiveImg';
+import Separator from '@/components/ui/Separator/Separator';
+
+import ButtonIcon from '@assets/icons/icon-arrow-left.svg?react';
+import scss from './Slide.module.scss';
 
 interface SlideProps {
   name: string;
@@ -18,7 +19,11 @@ const Slide: FC<SlideProps> = ({ name, title, desc, date }) => {
       <div className={scss.wrapper}>
         <div className={scss.labelWrapper}>
           <p className={scss.label}>{title}</p>
-          <button title="More details..." className={scss.btnMore}>
+          <button
+            title="More details..."
+            aria-aria-label="more details"
+            className={scss.btnMore}
+          >
             <ButtonIcon className={scss.btnIcon} />
           </button>
         </div>

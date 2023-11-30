@@ -6,21 +6,49 @@
 .actionsWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 26px;
+
+  & > p {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: -0.04em;
+    text-align: justify;
+    color: rgb(from var(--secondary-color) r g b / 0.25);
+  }
+
+  & span {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: -0.04em;
+    text-align: justify;
+    color: var(--secondary-color);
+  }
 }
 .actionBtnPrev,
 .actionBtnNext {
   @extend .btn;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  transform: rotate(90deg);
-  transition: background-color linear 250ms;
+  transition: background-color var(--transition), border-color var(--transition),
+    color var(--transition);
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
   background-color: var(--primary-white-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-white-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
   &:hover .btnIcon,
   &:focus .btnIcon {
     > path {
@@ -29,12 +57,12 @@
   }
 }
 .btnIcon {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   > path {
     transition: stroke linear 250ms;
   }
 }
 .actionBtnNext {
-  transform: rotate(-90deg);
+  transform: rotate(180deg);
 }

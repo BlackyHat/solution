@@ -2,15 +2,9 @@
 
 .footer {
   border-top: 1px solid var(--primary-color);
-  padding-top: 40px;
+  padding: 24px 0 24px;
 }
-.socialList {
-  margin: 24px auto 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
+
 .logoWrapper {
   display: flex;
   justify-content: space-between;
@@ -35,8 +29,13 @@
     }
   }
 }
+
 .socialList {
   margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 .socialLink {
   @extend .btn;

@@ -1,10 +1,10 @@
 import ContactUsForm from '@components/ui/ContactUsForm/ContactUsForm';
-
-import FbIcon from '@assets/facebook-icon.svg?react';
-import InstaIcon from '@assets/instagram-icon.svg?react';
-import PhoneIcon from '@assets/call.svg?react';
-import MapIcon from '@assets/map.svg?react';
-import EmailIcon from '@assets/sms.svg?react';
+import CONTACTS_DATA from '@/libs/content/contacts';
+import FbIcon from '@assets/icons/icon-fb.svg?react';
+import InstaIcon from '@assets/icons/icon-instagram.svg?react';
+import PhoneIcon from '@assets/icons/icon-phone.svg?react';
+import MapIcon from '@assets/icons/icon-map.svg?react';
+import EmailIcon from '@assets/icons/icon-email.svg?react';
 
 import scss from './ContactUs.module.scss';
 
@@ -16,21 +16,20 @@ const ContactUs = () => {
         <li>
           <p className={scss.contactLabel}>Phone:</p>
           <ul className={scss.phoneList}>
-            <li>
-              <PhoneIcon className={scss.contactIcon} />
-              <p>38 (098) 12 34 567</p>
-            </li>
-            <li>
-              <PhoneIcon className={scss.contactIcon} />
-              <p>38 (093) 12 34 567</p>
-            </li>
+            {CONTACTS_DATA.phones.length > 0 &&
+              CONTACTS_DATA.phones.map((phone) => (
+                <li>
+                  <PhoneIcon className={scss.contactIcon} />
+                  <p>{phone}</p>
+                </li>
+              ))}
           </ul>
         </li>
         <li>
           <p className={scss.contactLabel}>E-mail:</p>
           <div className={scss.labelWrapper}>
             <EmailIcon className={scss.contactIcon} />
-            <p>office@ecosolution.com</p>
+            <p>{CONTACTS_DATA.email}</p>
           </div>
         </li>
 
@@ -38,7 +37,7 @@ const ContactUs = () => {
           <p className={scss.contactLabel}>Address:</p>
           <div className={scss.labelWrapper}>
             <MapIcon className={scss.contactIcon} />
-            <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>
+            <p>{CONTACTS_DATA.address}</p>
           </div>
         </li>
         <li>

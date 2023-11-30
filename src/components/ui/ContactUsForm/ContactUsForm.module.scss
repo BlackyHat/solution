@@ -82,15 +82,9 @@
   border-radius: 50%;
   background-color: var(--primary-color);
   transform: rotate(-90deg);
-  transition: background-color linear 250ms;
-  background-image: url(@assets/arrow2.svg?react);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
+  padding: 8px;
 }
 
 .inputWrapper {
   position: relative;
-}
-.errorMsg {
 }

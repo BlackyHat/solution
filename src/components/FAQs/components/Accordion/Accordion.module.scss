@@ -6,7 +6,7 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  transition: color linear 250ms;
+  transition: color var(--transition);
   margin-bottom: 16px;
   position: relative;
   &:hover {

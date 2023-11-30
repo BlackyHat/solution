@@ -1,8 +1,8 @@
-import Logo from '../Logo/Logo';
-import ArrowIcon from '@assets/arrow2.svg?react';
+import Logo from '@components/Logo/Logo';
 
-import FbIcon from '@assets/facebook-icon.svg?react';
-import InstaIcon from '@assets/instagram-icon.svg?react';
+import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
+import FbIcon from '@assets/icons/icon-fb.svg?react';
+import InstaIcon from '@assets/icons/icon-instagram.svg?react';
 
 import scss from './Footer.module.scss';
 

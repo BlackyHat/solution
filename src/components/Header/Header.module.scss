@@ -34,7 +34,7 @@
   padding: 12px;
   width: 40px;
   height: 40px;
-  background-image: url(@assets/menu.svg?react);
+  background-image: url(@assets/icons/icon-menu.svg?react);
   background-position: center;
   background-repeat: no-repeat;
 
@@ -52,17 +52,14 @@
 .menuIcon {
   width: 16px;
   height: 16px;
-  transition: background-color linear 250ms;
+  transition: background-color var(--transition);
 }
 
 .arrowIcon {
   width: 14px;
   height: 14px;
   border-radius: 50%;
+  padding: 3px;
   background-color: var(--secondary-color);
-  transition: background-color linear 250ms;
-  background-image: url(@assets/arrow2.svg?react);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 8px 9px;
+  transition: background-color var(--transition);
 }

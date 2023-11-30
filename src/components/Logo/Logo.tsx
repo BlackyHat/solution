@@ -1,6 +1,6 @@
-import LogoIcon from '@assets/logo-icon.svg?react';
-import LogoLabel from '@assets/logo-label.svg?react';
-import LogoBadge from '@assets/logo-badge.svg?react';
+import LogoIcon from '@assets/icons/icon-logo.svg?react';
+import LogoLabel from '@assets/icons/logo-label.svg?react';
+import LogoBadge from '@assets/icons/logo-badge.svg?react';
 import scss from './Logo.module.scss';
 
 const Logo = () => {

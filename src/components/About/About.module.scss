@@ -1,16 +1,13 @@
+@import '@/sass/sectionTitle.scss';
+
 .section {
   text-align: center;
-  padding: 24px 0 36px;
+  padding-bottom: 36px;
 }
 
 .sectionTitle {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0em;
-  word-spacing: 0.04em;
-  text-align: left;
-  margin-bottom: 24px;
+  @extend .sectionTitle;
+  max-width: 264px;
 }
 .sectionInfo {
   font-size: 16px;
@@ -30,6 +27,7 @@
 .valuesItem {
   background-color: #eaedf1;
   padding: 12px;
+  height: 197px;
 }
 .valuesItemTitleWrapper {
   display: flex;

@@ -26,7 +26,6 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  transform: rotate(-135deg);
   transition: background-color linear 250ms;
   background-color: var(--primary-color);
   &:hover .btnIcon,
@@ -39,6 +38,7 @@
 .btnIcon {
   width: 28px;
   height: 28px;
+  transform: rotate(135deg);
   > path {
     transition: stroke linear 250ms;
   }

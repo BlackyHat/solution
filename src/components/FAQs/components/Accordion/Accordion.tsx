@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import scss from './Accordion.module.scss';
-import PlusIcon from '@assets/plus.svg?react';
-import MinusIcon from '@assets/minus.svg?react';
+
+import PlusIcon from '@assets/icons/icon-plus.svg?react';
+import MinusIcon from '@assets/icons/icon-minus.svg?react';
 import Separator from '@/components/ui/Separator/Separator';
+import scss from './Accordion.module.scss';
 
 interface AccordionProps {
   question: string;

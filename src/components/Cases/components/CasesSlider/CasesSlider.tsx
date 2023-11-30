@@ -1,44 +1,13 @@
 import { Children, useState, useRef, useEffect } from 'react';
 import Slider from 'react-slick';
+
 import Slide from '../Slide/Slide';
-import ButtonIcon from '@assets/arrow2.svg?react';
+import CASES from '@/libs/content/cases';
+import ButtonIcon from '@assets/icons/icon-arrow-left.svg?react';
 
 import './slick.scss';
 import './slick-theme.scss';
 import scss from './CasesSlider.module.scss';
-
-const SLIDES_DATA = [
-  {
-    name: 'slide-1',
-    title: 'Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”',
-    desc: 'Wind Power for auto field irrigation',
-    date: 'July 2023',
-  },
-  {
-    name: 'slide-2',
-    title: 'Zhytomyr city Private Enterprise “Bosch',
-    desc: 'Solar Panels for industrial use',
-    date: 'November 2023',
-  },
-  {
-    name: 'slide-3',
-    title: 'Rivne city Private Enterprise “Biotech”',
-    desc: 'Thermal modules',
-    date: 'October 2023',
-  },
-  {
-    name: 'slide-4',
-    title: 'Kherson city Private Enterprise “HealthyFarm”',
-    desc: 'Wind power',
-    date: 'September 2021',
-  },
-  {
-    name: 'slide-5',
-    title: 'Zaporizhia city Private Enterprise “Biotech”',
-    desc: 'Mini nuclear stations',
-    date: 'May 2021',
-  },
-];
 
 const CasesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -63,6 +32,8 @@ const CasesSlider = () => {
       sliderRef.current.slickPrev();
     }
   };
+
+  const formattedNumber = (num: number) => String(num).padStart(2, '0');
 
   const settings = {
     dots: false,
@@ -90,7 +61,8 @@ const CasesSlider = () => {
     <>
       <div className={scss.actionsWrapper}>
         <p>
-          <span>{currentSlide + 1}</span> / {totalSlides}
+          <span>{formattedNumber(currentSlide + 1)}</span> /
+          {formattedNumber(totalSlides)}
         </p>
         <ul className={scss.actionBtns}>
           <li>
@@ -110,8 +82,8 @@ const CasesSlider = () => {
         </ul>
       </div>
       <Slider {...settings} ref={sliderRef}>
-        {SLIDES_DATA.length > 0 &&
-          SLIDES_DATA.map(({ name, title, desc, date }) => (
+        {CASES.slides.length > 0 &&
+          CASES.slides.map(({ name, title, desc, date }) => (
             <Slide
               key={title}
               name={name}
