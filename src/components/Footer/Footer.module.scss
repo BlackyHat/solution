@@ -3,14 +3,19 @@
 .footer {
   border-top: 1px solid var(--primary-color);
   padding: 24px 0 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+
+  & > :first-child {
+    align-self: flex-start;
+  }
 }
 
-.logoWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
 .arrowUp {
   @extend .btn;
   padding: 0;
@@ -18,6 +23,9 @@
   border-radius: 50%;
   width: 32px;
   height: 32px;
+  position: absolute;
+  top: 28px;
+  right: 0px;
 
   & > svg {
     transform: rotate(180deg);
@@ -30,27 +38,6 @@
   }
 }
 
-.socialList {
-  margin-bottom: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-.socialLink {
-  @extend .btn;
-  padding: 0;
-  justify-content: center;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  background-color: var(--primary-white-color);
-
-  &:hover,
-  &:focus {
-    background-color: var(--primary-color);
-  }
-}
 .addressList {
   & > li:not(:last-child) {
     margin-bottom: 16px;

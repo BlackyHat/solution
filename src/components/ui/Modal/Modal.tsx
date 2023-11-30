@@ -25,19 +25,11 @@ const Modal: FC<ModalProps> = ({ onClose, children }) => {
       onClose && onClose();
     }
   };
-  // const handleClose = (e: MouseEvent<HTMLButtonElement>) => {
-  //   if (e.target === e.currentTarget) {
-  //     onClose && onClose();
-  //   }
-  // };
 
   return createPortal(
     <>
       <div className={scss.modalOverlay} onClick={handleClickBackdrop}></div>
       <div className={scss.modalBody}>
-        {/* <button onClick={handleClose} className={scss.closeButton}>
-          <PlusIcon className={scss.closeButtonIcon} />
-        </button> */}
         {children}
       </div>
     </>,

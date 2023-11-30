@@ -1,12 +1,11 @@
 import ContactUsForm from '@components/ui/ContactUsForm/ContactUsForm';
 import CONTACTS_DATA from '@/libs/content/contacts';
-import FbIcon from '@assets/icons/icon-fb.svg?react';
-import InstaIcon from '@assets/icons/icon-instagram.svg?react';
 import PhoneIcon from '@assets/icons/icon-phone.svg?react';
 import MapIcon from '@assets/icons/icon-map.svg?react';
 import EmailIcon from '@assets/icons/icon-email.svg?react';
 
 import scss from './ContactUs.module.scss';
+import SocialLinks from '../ui/SocialLinks/SocialLinks';
 
 const ContactUs = () => {
   return (
@@ -19,41 +18,36 @@ const ContactUs = () => {
             {CONTACTS_DATA.phones.length > 0 &&
               CONTACTS_DATA.phones.map((phone) => (
                 <li>
-                  <PhoneIcon className={scss.contactIcon} />
-                  <p>{phone}</p>
+                  <a href={`tel:${phone}`}>
+                    <PhoneIcon className={scss.contactIcon} />
+                    {phone}
+                  </a>
                 </li>
               ))}
           </ul>
         </li>
         <li>
           <p className={scss.contactLabel}>E-mail:</p>
-          <div className={scss.labelWrapper}>
+          <a href={`mailto:${CONTACTS_DATA.email}`}>
             <EmailIcon className={scss.contactIcon} />
-            <p>{CONTACTS_DATA.email}</p>
-          </div>
+            {CONTACTS_DATA.email}
+          </a>
         </li>
 
         <li>
           <p className={scss.contactLabel}>Address:</p>
-          <div className={scss.labelWrapper}>
+          <a
+            href={`http://maps.google.com/?q=:${CONTACTS_DATA.address}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <MapIcon className={scss.contactIcon} />
-            <p>{CONTACTS_DATA.address}</p>
-          </div>
+            {CONTACTS_DATA.address}
+          </a>
         </li>
         <li>
           <p className={scss.contactLabel}>Social Networks:</p>
-          <ul className={scss.socialList}>
-            <li>
-              <a href="" className={scss.socialLink}>
-                <FbIcon />
-              </a>
-            </li>
-            <li>
-              <a href="" className={scss.socialLink}>
-                <InstaIcon />
-              </a>
-            </li>
-          </ul>
+          <SocialLinks linkStyle={{ padding: '12px' }} />
         </li>
       </ul>
       <ContactUsForm />

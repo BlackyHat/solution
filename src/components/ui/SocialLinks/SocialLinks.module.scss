@@ -1,0 +1,45 @@
+.socialList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-white-color);
+  transition: color var(--transition);
+
+  &:hover > svg,
+  &:focus > svg {
+    color: var(--primary-color);
+  }
+
+  & > svg {
+    width: 24px;
+    height: 24px;
+    transition: color var(--transition);
+  }
+}
+.primary {
+  color: var(--secondary-color);
+}
+.white {
+  color: var(--primary-white-color);
+}
+
+.socialFB {
+  & > path:first-child {
+    fill: currentColor;
+  }
+  & > path:not(:first-child) {
+    stroke: currentColor;
+  }
+}
+.socialInsta {
+  & > path {
+    stroke: currentColor;
+  }
+}

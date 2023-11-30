@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import Modal from '@components/ui/Modal/Modal';
+import SocialLinks from '@components/ui/SocialLinks/SocialLinks';
 
 import CloseIcon from '@assets/icons/icon-close.svg?react';
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
-import FbIcon from '@assets/icons/icon-fb.svg?react';
-import InstaIcon from '@assets/icons/icon-instagram.svg?react';
 
 import scss from './BurgerMenu.module.scss';
 import NAV from '@/libs/content/nav';
@@ -34,18 +33,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ onClose }) => {
               ))}
           </ul>
         </div>
-        <ul className={scss.socialList}>
-          <li>
-            <a href="" className={scss.socialLink}>
-              <FbIcon className={scss.socialFB} />
-            </a>
-          </li>
-          <li>
-            <a href="" className={scss.socialLink}>
-              <InstaIcon className={scss.socialInsta} />
-            </a>
-          </li>
-        </ul>
+        <SocialLinks color="white" />
       </div>
     </Modal>
   );

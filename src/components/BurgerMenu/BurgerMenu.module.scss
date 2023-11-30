@@ -3,6 +3,16 @@
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 100%;
+
+  width: 320px;
+  height: calc(100vh - 2 * 36px);
+  max-height: 701px;
+  padding: 24px;
+
+  @media screen and (min-width: 1280px) {
+    width: 365px;
+    max-height: 873px;
+  }
 }
 
 .navList {
@@ -15,7 +25,6 @@
     justify-content: flex-start;
     gap: 8px;
 
-    font-family: Fira Sans;
     font-size: 24px;
     font-weight: 400;
     line-height: 29px;
@@ -86,35 +95,5 @@
   pointer-events: none;
   > path {
     fill: currentColor;
-  }
-}
-.socialList {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-}
-.socialLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  & > svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-.socialFB {
-  & > path:first-child {
-    fill: var(--primary-white-color);
-  }
-  & > path:not(:first-child) {
-    stroke: var(--primary-white-color);
-  }
-}
-.socialInsta {
-  & > path {
-    stroke: var(--primary-white-color);
   }
 }
