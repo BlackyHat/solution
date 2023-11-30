@@ -10,7 +10,7 @@ import scss from './ContactUs.module.scss';
 
 const ContactUs = () => {
   return (
-    <section className={scss.section}>
+    <section className={scss.section} id="contact-us-section">
       <h2 className={scss.sectionTitle}>Contact us</h2>
       <ul className={scss.contactList}>
         <li>

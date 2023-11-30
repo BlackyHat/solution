@@ -30,7 +30,7 @@ const VALUES = [
 
 const About = () => {
   return (
-    <section className={scss.section}>
+    <section className={scss.section} id="about-section">
       <h2 className={scss.sectionTitle}>Main values of our company</h2>
       <p className={scss.sectionInfo}>
         EcoSolution envisions a world where sustainable energy solutions power a

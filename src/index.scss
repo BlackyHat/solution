@@ -3,20 +3,22 @@
   line-height: 1.5;
   font-weight: 400;
   color: var(--secondary-color);
+  scroll-behavior: smooth;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
 
   :is(h1, h2, h3, h4, h5, h6) {
     font-family: 'Oswald', sans-serif;
   }
 }
+* {
+  box-sizing: border-box;
+}
 
 a {
-  font-weight: 500;
   text-decoration: inherit;
   box-sizing: border-box;
 }
@@ -28,6 +30,7 @@ ul {
 
 body {
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -47,4 +50,6 @@ html {
   --primary-white-color: #ffffff;
   --error-color: #d28b8b;
   --primary-text-color: #3f3f3f;
+
+  --transition: linear 250ms;
 }

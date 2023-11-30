@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import scss from './Accordion.module.scss';
 import PlusIcon from '@assets/plus.svg?react';
 import MinusIcon from '@assets/minus.svg?react';

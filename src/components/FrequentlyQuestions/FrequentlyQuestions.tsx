@@ -43,7 +43,9 @@ const FrequentlyQuestions = () => {
 
   return (
     <section>
-      <h2 className={scss.sectionTitle}>Frequently Asked Questions</h2>
+      <h2 className={scss.sectionTitle} id="faq-section">
+        Frequently Asked Questions
+      </h2>
       <ul className={scss.accordeonList}>
         {ANSWERS.length > 0 &&
           ANSWERS.map(({ question, answer }, idx) => (
@@ -56,10 +58,7 @@ const FrequentlyQuestions = () => {
             />
           ))}
       </ul>
-      <p className={scss.moreInfo}>
-        {' '}
-        Didn't find the answer to your question?{' '}
-      </p>
+      <p className={scss.moreInfo}>Didn't find the answer to your question?</p>
       <button type="button" className={scss.btnContact}>
         Contact Us
       </button>
