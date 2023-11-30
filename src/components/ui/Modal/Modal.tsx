@@ -1,4 +1,4 @@
-import { useEffect, FC, MouseEvent, KeyboardEvent } from 'react';
+import { useEffect, FC, MouseEvent } from 'react';
 import { createPortal } from 'react-dom';
 import scss from './Modal.module.scss';
 
@@ -6,13 +6,17 @@ interface ModalProps {
   onClose: () => void;
   children: React.ReactNode;
 }
+interface KeyboardEvent {
+  key: string;
+}
 
 const Modal: FC<ModalProps> = ({ onClose, children }) => {
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent): void => {
       if (e.key === 'Escape') {
         onClose && onClose();
       }
+      return;
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => {
@@ -29,9 +33,7 @@ const Modal: FC<ModalProps> = ({ onClose, children }) => {
   return createPortal(
     <>
       <div className={scss.modalOverlay} onClick={handleClickBackdrop}></div>
-      <div className={scss.modalBody}>
-        {children}
-      </div>
+      <div className={scss.modalBody}>{children}</div>
     </>,
     document.getElementById('portal') as HTMLElement
   );
