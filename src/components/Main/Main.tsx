@@ -10,13 +10,14 @@ import scss from './Main.module.scss';
 const Main = () => {
   return (
     <section className={scss.section} id="main-section">
-      <h1 className={scss.mainTitle}> {HERO_CONTENT.title}</h1>
-      <p className={scss.mainInfo}>{HERO_CONTENT.description}</p>
-      <button type="button" className={scss.btnMore}>
-        Learn more
-        <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
-        {/* <span className={scss.arrowIcon} aria-label="Arrow right" /> */}
-      </button>
+      <div className={scss.titleWrapper}>
+        <h1 className={scss.mainTitle}> {HERO_CONTENT.title}</h1>
+        <p className={scss.mainInfo}>{HERO_CONTENT.description}</p>
+        <button type="button" className={scss.btnMore}>
+          Learn more
+          <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
+        </button>
+      </div>
       <Separator />
       <ul className={scss.valuesList}>
         <li>

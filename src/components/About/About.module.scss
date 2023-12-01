@@ -3,26 +3,54 @@
 .section {
   text-align: center;
   padding-bottom: 36px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
 }
 
 .sectionTitle {
   @extend .sectionTitle;
   max-width: 264px;
 }
+.titleWrapper {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 36px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+  }
+}
+
 .sectionInfo {
+  position: relative;
   font-size: 16px;
   font-weight: 400;
-  line-height: 19px;
-  letter-spacing: -0.04em;
+  line-height: 19.2px;
+  letter-spacing: -0.045em;
   word-spacing: 0.04em;
   text-align: justify;
-  margin-bottom: 36px;
+  @media screen and (min-width: 768px) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -11px;
+      width: 1px;
+      background-color: var(--primary-color);
+      height: 100%;
+    }
+  }
 }
 
 .valuesList {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .valuesItem {
   background-color: #eaedf1;

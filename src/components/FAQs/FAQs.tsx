@@ -31,11 +31,15 @@ const FAQs = () => {
             />
           ))}
       </ul>
-      <p className={scss.moreInfo}>Didn't find the answer to your question?</p>
-      <button type="button" className={scss.btnContact}>
-        Contact Us
-        <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
-      </button>
+      <div>
+        <p className={scss.moreInfo}>
+          Didn't find the answer to your question?
+        </p>
+        <button type="button" className={scss.btnContact}>
+          Contact Us
+          <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
+        </button>
+      </div>
     </section>
   );
 };

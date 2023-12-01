@@ -21,7 +21,7 @@ const Slide: FC<SlideProps> = ({ name, title, desc, date }) => {
           <p className={scss.label}>{title}</p>
           <button
             title="More details..."
-            aria-aria-label="more details"
+            aria-label="more details"
             className={scss.btnMore}
           >
             <ButtonIcon className={scss.btnIcon} />

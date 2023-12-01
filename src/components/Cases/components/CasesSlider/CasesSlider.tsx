@@ -1,4 +1,4 @@
-import { Children, useState, useRef, useEffect } from 'react';
+import { Children, useState, useRef, useEffect, useMemo } from 'react';
 import Slider from 'react-slick';
 
 import Slide from '../Slide/Slide';
@@ -34,7 +34,9 @@ const CasesSlider = () => {
   };
 
   const formattedNumber = (num: number) => String(num).padStart(2, '0');
-
+  const memoizedSLides = useMemo(() => {
+    return [...CASES.slides];
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -59,31 +61,39 @@ const CasesSlider = () => {
 
   return (
     <>
-      <div className={scss.actionsWrapper}>
-        <p>
-          <span>{formattedNumber(currentSlide + 1)}</span> /
-          {formattedNumber(totalSlides)}
-        </p>
-        <ul className={scss.actionBtns}>
-          <li>
-            <button
-              type="button"
-              className={scss.actionBtnPrev}
-              onClick={previous}
-            >
-              <ButtonIcon className={scss.btnIcon} />
-            </button>
-          </li>
-          <li>
-            <button type="button" className={scss.actionBtnNext} onClick={next}>
-              <ButtonIcon className={scss.btnIcon} />
-            </button>
-          </li>
-        </ul>
+      <div className={scss.titleWrapper}>
+        <h2 className={scss.sliderTitle}>{CASES.title}</h2>
+        <div className={scss.actionsWrapper}>
+          <p>
+            <span>{formattedNumber(currentSlide + 1)}</span> /
+            {formattedNumber(totalSlides)}
+          </p>
+          <ul className={scss.actionBtns}>
+            <li>
+              <button
+                type="button"
+                className={scss.actionBtnPrev}
+                onClick={previous}
+              >
+                <ButtonIcon className={scss.btnIcon} />
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                className={scss.actionBtnNext}
+                onClick={next}
+              >
+                <ButtonIcon className={scss.btnIcon} />
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
+
       <Slider {...settings} ref={sliderRef}>
-        {CASES.slides.length > 0 &&
-          CASES.slides.map(({ name, title, desc, date }) => (
+        {memoizedSLides.length > 0 &&
+          memoizedSLides.map(({ name, title, desc, date }) => (
             <Slide
               key={title}
               name={name}

@@ -1,13 +1,44 @@
 @import '@/sass/button.scss';
+@import '@/sass/sectionTitle.scss';
+
+.sliderTitle {
+  @extend .sectionTitle;
+  max-width: 264px;
+}
+.titleWrapper {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+
+    & > :nth-child(1) {
+      max-width: 300px;
+    }
+  }
+}
 .actionBtns {
   display: flex;
   gap: 12px;
 }
 .actionsWrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 26px;
+  @media screen and (min-width: 768px) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -8px;
+      width: 1px;
+      background-color: var(--primary-color);
+      height: 100%;
+    }
+  }
 
   & > p {
     font-size: 28px;

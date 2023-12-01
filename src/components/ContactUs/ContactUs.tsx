@@ -17,7 +17,7 @@ const ContactUs = () => {
           <ul className={scss.phoneList}>
             {CONTACTS_DATA.phones.length > 0 &&
               CONTACTS_DATA.phones.map((phone) => (
-                <li>
+                <li key={phone}>
                   <a href={`tel:${phone}`}>
                     <PhoneIcon className={scss.contactIcon} />
                     {phone}

@@ -2,10 +2,15 @@
 
 .section {
   padding-bottom: 36px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
 }
 .sectionTitle {
   @extend .sectionTitle;
   text-align: center;
+  max-width: 368px;
+  margin: 0 auto 24px;
 }
 .separator {
   background-color: var(--primary-color);
@@ -26,6 +31,16 @@
   line-height: 48px;
   letter-spacing: 0em;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    gap: 24px;
+
+    font-size: 100px;
+    line-height: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 164px;
+    line-height: 164px;
+  }
 }
 .units {
   font-family: Oswald;
@@ -35,4 +50,10 @@
   letter-spacing: 0em;
   text-align: center;
   color: var(--secondary-color);
+  @media screen and (min-width: 768px) {
+    line-height: 48px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 48px;
+  }
 }

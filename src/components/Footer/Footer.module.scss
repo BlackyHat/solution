@@ -2,7 +2,7 @@
 
 .footer {
   border-top: 1px solid var(--primary-color);
-  padding: 24px 0 24px;
+  padding: 24px 0;
 
   display: flex;
   flex-direction: column;
@@ -14,8 +14,17 @@
   & > :first-child {
     align-self: flex-start;
   }
-}
 
+  @media screen and (min-width: 768px) {
+    padding: 40px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    & > :last-child {
+      grid-column: span 2;
+    }
+  }
+}
 .arrowUp {
   @extend .btn;
   padding: 0;
@@ -36,6 +45,9 @@
       stroke: currentColor;
     }
   }
+  @media screen and (min-width: 768px) {
+    top: 40px;
+  }
 }
 
 .addressList {
@@ -50,5 +62,11 @@
     line-height: 19px;
     letter-spacing: -0.04em;
     text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 50% repeat(2, 1fr);
+    justify-items: start;
   }
 }

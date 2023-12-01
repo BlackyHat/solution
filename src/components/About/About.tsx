@@ -5,8 +5,10 @@ import scss from './About.module.scss';
 const About = () => {
   return (
     <section className={scss.section} id="about-section">
-      <h2 className={scss.sectionTitle}>{ABOUT.title}</h2>
-      <p className={scss.sectionInfo}>{ABOUT.description}</p>
+      <div className={scss.titleWrapper}>
+        <h2 className={scss.sectionTitle}>{ABOUT.title}</h2>
+        <p className={scss.sectionInfo}>{ABOUT.description}</p>
+      </div>
       <ul className={scss.valuesList}>
         {ABOUT.values.length > 0 &&
           ABOUT.values.map(({ title, desc, icon }) => {
