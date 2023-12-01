@@ -1,4 +1,4 @@
-import ResponsiveImg from '@components/ui/ResponsiveImg';
+import ResponsiveImg from '@/components/ui/ResponsiveImg/ResponsiveImg';
 import Separator from '@components/ui/Separator/Separator';
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
 
@@ -19,7 +19,7 @@ const Main = () => {
         </button>
       </div>
       <Separator />
-      <ul className={scss.valuesList}>
+      <ul className={scss.contactList}>
         <li>
           <span className={scss.address}>{CONTACTS.address}</span>
         </li>
@@ -30,7 +30,7 @@ const Main = () => {
           <span className={scss.rights}>{CONTACTS.rights}</span>
         </li>
       </ul>
-      <ResponsiveImg name="hero" />
+      <ResponsiveImg name="hero" alt="wind-turbine-clean-energy" />
     </section>
   );
 };

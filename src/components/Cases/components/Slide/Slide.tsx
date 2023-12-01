@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ResponsiveImg from '@/components/ui/ResponsiveImg';
+import ResponsiveImg from '@/components/ui/ResponsiveImg/ResponsiveImg';
 import Separator from '@/components/ui/Separator/Separator';
 
 import ButtonIcon from '@assets/icons/icon-arrow-left.svg?react';

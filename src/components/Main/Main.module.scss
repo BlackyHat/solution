@@ -6,6 +6,9 @@
   @media screen and (min-width: 768px) {
     padding: 128px 0 100px;
   }
+  @media screen and (min-width: 1280px) {
+    padding: 176px 0 120px;
+  }
 }
 .titleWrapper {
   display: grid;
@@ -14,24 +17,40 @@
 
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 62px;
+    row-gap: 43px;
 
     & > :nth-child(1) {
       grid-row: span 2;
       max-width: 300px;
     }
   }
+  @media screen and (min-width: 1280px) {
+    row-gap: 20px;
+
+    & > :nth-child(1) {
+      grid-row: span 2;
+      max-width: 486px;
+    }
+
+    & > :not(:first-child) {
+      margin-left: 130px;
+    }
+  }
 }
 .mainTitle {
   font-size: 36px;
-  font-weight: 400;
   line-height: 36px;
+  font-weight: 400;
   word-spacing: 0.04em;
   text-align: left;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
     font-size: 48px;
     line-height: 48px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+    line-height: 64px;
   }
 }
 .mainInfo {
@@ -41,9 +60,7 @@
   letter-spacing: -0.04em;
   word-spacing: 0.04em;
   text-align: justify;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 43px;
-  }
+  max-width: 363px;
 }
 .btnMore {
   @extend .btn;
@@ -68,12 +85,16 @@
   transition: background-color var(--transition);
   padding: 8px;
 }
-.valuesList {
+.contactList {
   margin: 24px 0 36px;
   @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 50% repeat(2, 1fr);
+    justify-items: start;
     margin: 16px 0 40px;
+    & :last-child {
+      justify-self: end;
+    }
   }
 }
 .address {

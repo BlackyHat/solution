@@ -19,6 +19,16 @@ export default {
       icon: ValueIcon2,
     },
     {
+      type: 'poster',
+      alt: 'wind-farms-fields',
+      name: 'value-1',
+    },
+    {
+      type: 'poster',
+      alt: 'man-worker-firld-by-solar-panels',
+      name: 'value-2',
+    },
+    {
       title: 'Innovation',
       desc: 'we use the latest technology to implement non-standard solutions',
       icon: ValueIcon3,

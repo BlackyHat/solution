@@ -49,13 +49,23 @@
   gap: 24px;
   grid-template-columns: repeat(2, 1fr);
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    & > .valuesPoster {
+      grid-column: span 2;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 48px;
   }
 }
 .valuesItem {
   background-color: #eaedf1;
   padding: 12px;
   height: 197px;
+  @media screen and (min-width: 1280px) {
+    height: 339px;
+    padding: 48px 24px;
+  }
 }
 .valuesItemTitleWrapper {
   display: flex;
@@ -63,6 +73,12 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 51px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 94px;
+  }
 }
 .valuesItemTitle {
   font-size: 16px;
@@ -72,6 +88,14 @@
   text-align: left;
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 32px;
+    line-height: 48px;
+  }
 }
 
 .valuesItemInfo {
@@ -81,4 +105,17 @@
   line-height: 17px;
   letter-spacing: -0.04em;
   text-align: justify;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 24px;
+  }
+}
+.poster {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 100%;
+  }
 }
