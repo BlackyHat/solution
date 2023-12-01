@@ -4,6 +4,12 @@
 .sliderTitle {
   @extend .sectionTitle;
   max-width: 264px;
+  @media screen and (min-width: 768px) {
+    max-width: 300px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 398px;
+  }
 }
 .titleWrapper {
   display: grid;
@@ -13,10 +19,9 @@
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 16px;
-
-    & > :nth-child(1) {
-      max-width: 300px;
-    }
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
   }
 }
 .actionBtns {
@@ -47,6 +52,10 @@
     letter-spacing: -0.04em;
     text-align: justify;
     color: rgb(from var(--secondary-color) r g b / 0.25);
+    @media screen and (min-width: 1280px) {
+      align-self: flex-end;
+      margin: 0 auto;
+    }
   }
 
   & span {

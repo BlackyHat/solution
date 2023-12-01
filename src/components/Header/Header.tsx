@@ -21,10 +21,10 @@ const Header = () => {
               <button className={scss.btnMenu} onClick={onOpen} />
             </li>
             <li>
-              <button type="button" className={scss.btnContact}>
+              <a href="#contact-us-section" className={scss.btnContact}>
                 Get in touch
                 <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
-              </button>
+              </a>
             </li>
           </ul>
         </nav>

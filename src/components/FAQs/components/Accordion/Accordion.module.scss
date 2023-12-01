@@ -16,13 +16,16 @@
 
 .accordionTitle {
   margin-top: 16px;
-  font-family: Fira Sans;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: -0.04em;
   text-align: justify;
   padding-left: 24px;
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 .accordionInfo {
   font-family: Fira Sans;
@@ -32,6 +35,10 @@
   letter-spacing: -0.04em;
   text-align: justify;
   padding-left: 24px;
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .iconMinus {

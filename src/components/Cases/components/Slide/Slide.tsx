@@ -10,9 +10,10 @@ interface SlideProps {
   title: string;
   desc: string;
   date: string;
+  onClick: () => void;
 }
 
-const Slide: FC<SlideProps> = ({ name, title, desc, date }) => {
+const Slide: FC<SlideProps> = ({ name, title, desc, date, onClick }) => {
   return (
     <div className={scss.slide}>
       <ResponsiveImg name={name} />
@@ -23,6 +24,7 @@ const Slide: FC<SlideProps> = ({ name, title, desc, date }) => {
             title="More details..."
             aria-label="more details"
             className={scss.btnMore}
+            onClick={onClick}
           >
             <ButtonIcon className={scss.btnIcon} />
           </button>

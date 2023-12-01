@@ -35,10 +35,10 @@ const FAQs = () => {
         <p className={scss.moreInfo}>
           Didn't find the answer to your question?
         </p>
-        <button type="button" className={scss.btnContact}>
+        <a href="#contact-us-section" className={scss.btnContact}>
           Contact Us
           <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
-        </button>
+        </a>
       </div>
     </section>
   );

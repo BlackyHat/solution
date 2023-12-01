@@ -100,6 +100,7 @@ const CasesSlider = () => {
               title={title}
               desc={desc}
               date={date}
+              onClick={next}
             />
           ))}
       </Slider>

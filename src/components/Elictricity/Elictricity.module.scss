@@ -5,18 +5,29 @@
   @media screen and (min-width: 768px) {
     padding-bottom: 100px;
   }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 }
 .sectionTitle {
   @extend .sectionTitle;
   text-align: center;
   max-width: 368px;
   margin: 0 auto 24px;
+  @media screen and (min-width: 1280px) {
+    max-width: 492px;
+    margin-bottom: 16px;
+  }
 }
 .separator {
   background-color: var(--primary-color);
   width: 1px;
   height: 48px;
   margin: 0 auto 24px;
+  @media screen and (min-width: 1280px) {
+    height: 87px;
+    margin-bottom: 16px;
+  }
 }
 .label {
   display: flex;

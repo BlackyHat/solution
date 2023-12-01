@@ -21,6 +21,10 @@
   padding: 24px 12px 12px;
   background-color: #eaedf1;
   overflow: hidden;
+
+  @media screen and (min-width: 1280px) {
+    padding: 36px 48px;
+  }
 }
 .labelWrapper {
   display: flex;
@@ -79,7 +83,6 @@
 }
 .meta {
   margin-top: 12px;
-  font-family: Fira Sans;
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
@@ -87,6 +90,11 @@
   text-align: justify;
   display: flex;
   justify-content: space-between;
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 34px;
+  }
 }
 .dataBadge {
   font-family: Fira Sans;
@@ -95,4 +103,8 @@
   line-height: 14px;
   letter-spacing: -0.04em;
   text-align: right;
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }

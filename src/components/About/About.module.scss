@@ -11,6 +11,9 @@
 .sectionTitle {
   @extend .sectionTitle;
   max-width: 264px;
+  @media screen and (min-width: 1280px) {
+    max-width: 365px;
+  }
 }
 .titleWrapper {
   display: grid;
@@ -20,6 +23,9 @@
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 122px;
   }
 }
 
@@ -40,7 +46,14 @@
       width: 1px;
       background-color: var(--primary-color);
       height: 100%;
+      @media screen and (min-width: 1280px) {
+        left: -161px;
+      }
     }
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 460px;
+    justify-self: end;
   }
 }
 
@@ -117,5 +130,14 @@
   @media screen and (min-width: 768px) {
     display: block;
     width: 100%;
+  }
+}
+
+.valuesIcon {
+  width: 16px;
+  height: 16px;
+  @media screen and (min-width: 1280px) {
+    width: 24px;
+    height: 24px;
   }
 }

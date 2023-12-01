@@ -1,7 +1,7 @@
 import ResponsiveImg from '@/components/ui/ResponsiveImg/ResponsiveImg';
 import Separator from '@components/ui/Separator/Separator';
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
-
+import CONTACTS_DATA from '@/libs/content/contacts';
 import HERO_CONTENT from '@/libs/content/hero';
 import CONTACTS from '@/libs/content/contacts';
 
@@ -13,18 +13,26 @@ const Main = () => {
       <div className={scss.titleWrapper}>
         <h1 className={scss.mainTitle}> {HERO_CONTENT.title}</h1>
         <p className={scss.mainInfo}>{HERO_CONTENT.description}</p>
-        <button type="button" className={scss.btnMore}>
+        <a href="#cases-section" className={scss.btnMore}>
           Learn more
           <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
-        </button>
+        </a>
       </div>
       <Separator />
       <ul className={scss.contactList}>
         <li>
-          <span className={scss.address}>{CONTACTS.address}</span>
+          {/* <span className={scss.address}>{CONTACTS.address}</span> */}
+          <a
+            href={`http://maps.google.com/?q=:${CONTACTS_DATA.address}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {CONTACTS_DATA.address}
+          </a>
         </li>
         <li>
-          <span className={scss.email}>{CONTACTS.email}</span>
+          {/* <span className={scss.email}>{CONTACTS.email}</span> */}
+          <a href={`mailto:${CONTACTS_DATA.email}`}> {CONTACTS_DATA.email}</a>
         </li>
         <li>
           <span className={scss.rights}>{CONTACTS.rights}</span>

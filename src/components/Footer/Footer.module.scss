@@ -10,7 +10,19 @@
   justify-content: center;
   gap: 24px;
   position: relative;
-
+  & a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: var(--secondary-color);
+    transition: color var(--transition);
+    &:hover,
+    &:focus {
+      color: var(--primary-color);
+    }
+  }
   & > :first-child {
     align-self: flex-start;
   }

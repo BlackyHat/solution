@@ -1,6 +1,8 @@
 import Logo from '@components/Logo/Logo';
 
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
+import CONTACTS_DATA from '@/libs/content/contacts';
+
 import scss from './Footer.module.scss';
 import SocialLinks from '../ui/SocialLinks/SocialLinks';
 
@@ -14,10 +16,16 @@ const Footer = () => {
       <SocialLinks />
       <ul className={scss.addressList}>
         <li>
-          <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>
+          <a
+            href={`http://maps.google.com/?q=:${CONTACTS_DATA.address}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {CONTACTS_DATA.address}
+          </a>
         </li>
         <li>
-          <p>office@ecosolution.com</p>
+          <a href={`mailto:${CONTACTS_DATA.email}`}> {CONTACTS_DATA.email}</a>
         </li>
         <li>
           <p>ecosolution © 2023</p>
