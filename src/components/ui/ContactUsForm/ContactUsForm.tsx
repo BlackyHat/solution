@@ -3,7 +3,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
 import scss from './ContactUsForm.module.scss';
-// import { toast } from 'react-hot-toast';
 
 const formSchema = z.object({
   fullName: z.string().min(3, { message: 'Wrong Fullname' }).trim(),
@@ -84,7 +83,6 @@ const ContactUsForm = () => {
       </div>
       <button type="submit">
         Send
-        {/* <span className={scss.arrowIcon} aria-label="Arrow right" /> */}
         <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
       </button>
     </form>

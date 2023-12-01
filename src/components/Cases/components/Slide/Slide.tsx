@@ -2,7 +2,7 @@ import { FC } from 'react';
 import ResponsiveImg from '@/components/ui/ResponsiveImg/ResponsiveImg';
 import Separator from '@/components/ui/Separator/Separator';
 
-import ButtonIcon from '@assets/icons/icon-arrow-left.svg?react';
+import ArrowIcon from '@assets/icons/icon-arrow-left.svg?react';
 import scss from './Slide.module.scss';
 
 interface SlideProps {
@@ -16,7 +16,7 @@ interface SlideProps {
 const Slide: FC<SlideProps> = ({ name, title, desc, date, onClick }) => {
   return (
     <div className={scss.slide}>
-      <ResponsiveImg name={name} />
+      <ResponsiveImg name={name} alt={title} />
       <div className={scss.wrapper}>
         <div className={scss.labelWrapper}>
           <p className={scss.label}>{title}</p>
@@ -26,7 +26,7 @@ const Slide: FC<SlideProps> = ({ name, title, desc, date, onClick }) => {
             className={scss.btnMore}
             onClick={onClick}
           >
-            <ButtonIcon className={scss.btnIcon} />
+            <ArrowIcon className={scss.btnIcon} aria-label="arrow" />
           </button>
         </div>
         <Separator />

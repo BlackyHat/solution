@@ -21,7 +21,7 @@ const SocialLinks: FC<SocialLinksProps> = ({
           style={Object.assign({}, linkStyle && linkStyle)}
           rel="noreferrer"
         >
-          <FbIcon className={scss.socialFB} />
+          <FbIcon className={scss.socialFB} aria-label="facebook" />
         </a>
       </li>
       <li>
@@ -31,7 +31,7 @@ const SocialLinks: FC<SocialLinksProps> = ({
           style={Object.assign({}, linkStyle && linkStyle)}
           rel="noreferrer"
         >
-          <InstaIcon className={scss.socialInsta} />
+          <InstaIcon className={scss.socialInsta} aria-label="instagram" />
         </a>
       </li>
     </ul>

@@ -23,9 +23,9 @@ const Accordion: FC<AccordionProps> = ({
       <Separator />
       <div className={scss.titleWrapper} onClick={setActive}>
         {isActive ? (
-          <MinusIcon className={scss.iconMinus} />
+          <MinusIcon className={scss.iconMinus} aria-label="close" />
         ) : (
-          <PlusIcon className={scss.iconPlus} />
+          <PlusIcon className={scss.iconPlus} aria-label="show" />
         )}
         <p className={scss.accordionTitle}>{question}</p>
       </div>

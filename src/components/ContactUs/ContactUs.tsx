@@ -19,7 +19,10 @@ const ContactUs = () => {
               CONTACTS_DATA.phones.map((phone) => (
                 <li key={phone}>
                   <a href={`tel:${phone}`}>
-                    <PhoneIcon className={scss.contactIcon} />
+                    <PhoneIcon
+                      className={scss.contactIcon}
+                      aria-label="phone"
+                    />
                     {phone}
                   </a>
                 </li>
@@ -29,7 +32,7 @@ const ContactUs = () => {
         <li>
           <p className={scss.contactLabel}>E-mail:</p>
           <a href={`mailto:${CONTACTS_DATA.email}`}>
-            <EmailIcon className={scss.contactIcon} />
+            <EmailIcon className={scss.contactIcon} aria-label="e-mail" />
             {CONTACTS_DATA.email}
           </a>
         </li>
@@ -41,7 +44,7 @@ const ContactUs = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <MapIcon className={scss.contactIcon} />
+            <MapIcon className={scss.contactIcon} aria-label="map" />
             {CONTACTS_DATA.address}
           </a>
         </li>

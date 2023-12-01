@@ -21,7 +21,6 @@ const Main = () => {
       <Separator />
       <ul className={scss.contactList}>
         <li>
-          {/* <span className={scss.address}>{CONTACTS.address}</span> */}
           <a
             href={`http://maps.google.com/?q=:${CONTACTS_DATA.address}`}
             target="_blank"
@@ -31,7 +30,6 @@ const Main = () => {
           </a>
         </li>
         <li>
-          {/* <span className={scss.email}>{CONTACTS.email}</span> */}
           <a href={`mailto:${CONTACTS_DATA.email}`}> {CONTACTS_DATA.email}</a>
         </li>
         <li>

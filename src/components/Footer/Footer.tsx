@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className={scss.footer}>
       <Logo />
       <a href="#main-section" className={scss.arrowUp}>
-        <ArrowIcon />
+        <ArrowIcon aria-label="arrow up" />
       </a>
       <SocialLinks />
       <ul className={scss.addressList}>

@@ -18,7 +18,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ onClose }) => {
       <div className={scss.wrapper}>
         <div>
           <button type="button" className={scss.closeBtn} onClick={onClose}>
-            <CloseIcon className={scss.closeBtnIcon} />
+            <CloseIcon className={scss.closeBtnIcon} aria-label="close" />
             <span>close</span>
           </button>
           <ul className={scss.navList}>
@@ -27,7 +27,10 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ onClose }) => {
                 <li>
                   <a href={`#${link}-section`} title={title} onClick={onClose}>
                     <span>{title}</span>
-                    <ArrowIcon className={scss.arrowBtnIcon} />
+                    <ArrowIcon
+                      className={scss.arrowBtnIcon}
+                      aria-label="arrow down"
+                    />
                   </a>
                 </li>
               ))}

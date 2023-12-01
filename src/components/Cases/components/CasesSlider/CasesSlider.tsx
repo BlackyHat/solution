@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 
 import Slide from '../Slide/Slide';
 import CASES from '@/libs/content/cases';
-import ButtonIcon from '@assets/icons/icon-arrow-left.svg?react';
+import ArrowIcon from '@assets/icons/icon-arrow-left.svg?react';
 
 import './slick.scss';
 import './slick-theme.scss';
@@ -75,7 +75,7 @@ const CasesSlider = () => {
                 className={scss.actionBtnPrev}
                 onClick={previous}
               >
-                <ButtonIcon className={scss.btnIcon} />
+                <ArrowIcon className={scss.btnIcon} aria-label="previous" />
               </button>
             </li>
             <li>
@@ -84,7 +84,7 @@ const CasesSlider = () => {
                 className={scss.actionBtnNext}
                 onClick={next}
               >
-                <ButtonIcon className={scss.btnIcon} />
+                <ArrowIcon className={scss.btnIcon} aria-label="next" />
               </button>
             </li>
           </ul>
