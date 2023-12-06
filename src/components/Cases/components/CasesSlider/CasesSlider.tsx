@@ -1,4 +1,4 @@
-import { Children, useState, useRef, useEffect, useMemo } from 'react';
+import { Children, useState, useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 
 import Slide from '../Slide/Slide';
@@ -34,9 +34,7 @@ const CasesSlider = () => {
   };
 
   const formattedNumber = (num: number) => String(num).padStart(2, '0');
-  const memoizedSLides = useMemo(() => {
-    return [...CASES.slides];
-  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -92,8 +90,8 @@ const CasesSlider = () => {
       </div>
 
       <Slider {...settings} ref={sliderRef}>
-        {memoizedSLides.length > 0 &&
-          memoizedSLides.map(({ name, title, desc, date }) => (
+        {CASES.slides.length > 0 &&
+          CASES.slides.map(({ name, title, desc, date }) => (
             <Slide
               key={title}
               name={name}

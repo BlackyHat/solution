@@ -24,7 +24,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ onClose }) => {
           <ul className={scss.navList}>
             {NAV.length > 0 &&
               NAV.map(({ title, link }) => (
-                <li>
+                <li key={link}>
                   <a href={`#${link}-section`} title={title} onClick={onClose}>
                     <span>{title}</span>
                     <ArrowIcon

@@ -9,7 +9,7 @@ export default {
     },
     {
       name: 'slide-2',
-      title: 'Zhytomyr city Private Enterprise “Bosch',
+      title: 'Zhytomyr city Private Enterprise "Bosch"',
       desc: 'Solar Panels for industrial use',
       date: 'November 2023',
     },

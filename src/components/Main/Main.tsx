@@ -36,7 +36,11 @@ const Main = () => {
           <span className={scss.rights}>{CONTACTS.rights}</span>
         </li>
       </ul>
-      <ResponsiveImg name="hero" alt="wind-turbine-clean-energy" />
+      <ResponsiveImg
+        name="hero"
+        alt="wind-turbine-clean-energy"
+        className={scss.image}
+      />
     </section>
   );
 };

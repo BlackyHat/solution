@@ -51,7 +51,7 @@
     line-height: 34px;
     letter-spacing: -0.04em;
     text-align: justify;
-    color: rgb(from var(--secondary-color) r g b / 0.25);
+    color: var(--secondary-text-color);
     @media screen and (min-width: 1280px) {
       align-self: flex-end;
       margin: 0 auto;
