@@ -1,7 +1,7 @@
 import { useState } from 'react';
+
 import Accordion from './components/Accordion/Accordion';
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
-
 import scss from './FAQs.module.scss';
 import FAQ_INFO from '@/libs/content/faqs';
 

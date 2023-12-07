@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { AnimatePresence } from 'framer-motion';
 import BurgerMenu from '@components/BurgerMenu/BurgerMenu';
 import Logo from '@components/Logo/Logo';
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
@@ -29,7 +29,9 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      {isOpen && <BurgerMenu onClose={onClose} />}
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+        {isOpen && <BurgerMenu onClose={onClose} />}
+      </AnimatePresence>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import PlusIcon from '@assets/icons/icon-plus.svg?react';
 import MinusIcon from '@assets/icons/icon-minus.svg?react';
 import Separator from '@/components/ui/Separator/Separator';
@@ -11,6 +11,26 @@ interface AccordionProps {
   isActive: boolean;
   setActive: () => void;
 }
+const dropIn = {
+  hidden: {
+    y: '-60%',
+    opacity: 0,
+  },
+  visible: {
+    y: '0',
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      type: 'spring',
+      damping: 25,
+      stiffness: 500,
+    },
+  },
+  exit: {
+    y: '60%',
+    opacity: 0,
+  },
+};
 
 const Accordion: FC<AccordionProps> = ({
   isActive,
@@ -29,7 +49,19 @@ const Accordion: FC<AccordionProps> = ({
         )}
         <p className={scss.accordionTitle}>{question}</p>
       </div>
-      {isActive && <p className={scss.accordionInfo}>{answer}</p>}
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+        {isActive && (
+          <motion.p
+            variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className={scss.accordionInfo}
+          >
+            {answer}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </li>
   );
 };
