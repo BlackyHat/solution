@@ -65,7 +65,9 @@
   margin-bottom: 33px;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:hover .closeBtnIcon,
+  &:focus .closeBtnIcon {
     color: var(--primary-color);
   }
 
@@ -93,7 +95,10 @@
   height: 22px;
   margin-left: -4px;
   pointer-events: none;
+  transition: color var(--transition);
+
   > path {
     fill: currentColor;
+    stroke: currentColor;
   }
 }
