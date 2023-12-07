@@ -37,20 +37,20 @@
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  @media screen and (min-width: 768px) {
-    -webkit-transform: translate3d(6px, 0, 0);
-    -moz-transform: translate3d(6px, 0, 0);
-    -ms-transform: translate3d(6px, 0, 0);
-    -o-transform: translate3d(6px, 0, 0);
-    transform: translate3d(6px, 0, 0);
-  }
-  @media screen and (min-width: 1280px) {
-    -webkit-transform: translate3d(12px, 0, 0);
-    -moz-transform: translate3d(12px, 0, 0);
-    -ms-transform: translate3d(12px, 0, 0);
-    -o-transform: translate3d(12px, 0, 0);
-    transform: translate3d(12px, 0, 0);
-  }
+  // @media screen and (min-width: 768px) {
+  //   -webkit-transform: translate3d(6px, 0, 0);
+  //   -moz-transform: translate3d(6px, 0, 0);
+  //   -ms-transform: translate3d(6px, 0, 0);
+  //   -o-transform: translate3d(6px, 0, 0);
+  //   transform: translate3d(6px, 0, 0);
+  // }
+  // @media screen and (min-width: 1280px) {
+  //   -webkit-transform: translate3d(12px, 0, 0);
+  //   -moz-transform: translate3d(12px, 0, 0);
+  //   -ms-transform: translate3d(12px, 0, 0);
+  //   -o-transform: translate3d(12px, 0, 0);
+  //   transform: translate3d(12px, 0, 0);
+  // }
 }
 
 .slick-track {
@@ -85,9 +85,6 @@
   img {
     display: block;
   }
-  &.slick-loading img {
-    display: none;
-  }
 
   display: none;
 
@@ -111,4 +108,23 @@
 }
 .slick-arrow.slick-hidden {
   display: none;
+}
+.slick-slider {
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+    margin: 0 -12px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 0 -24px;
+  }
+}
+.slick-slide {
+  @media screen and (min-width: 768px) {
+    max-width: 342px;
+    margin: 0 12px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 596px;
+    margin: 0 24px;
+  }
 }

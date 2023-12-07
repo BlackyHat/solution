@@ -90,17 +90,16 @@ const CasesSlider = () => {
       </div>
 
       <Slider {...settings} ref={sliderRef}>
-        {CASES.slides.length > 0 &&
-          CASES.slides.map(({ name, title, desc, date }) => (
-            <Slide
-              key={title}
-              name={name}
-              title={title}
-              desc={desc}
-              date={date}
-              onClick={next}
-            />
-          ))}
+        {CASES.slides.map(({ name, title, desc, date }) => (
+          <Slide
+            key={title}
+            name={name}
+            title={title}
+            desc={desc}
+            date={date}
+            onClick={next}
+          />
+        ))}
       </Slider>
     </>
   );
