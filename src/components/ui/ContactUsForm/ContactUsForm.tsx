@@ -1,3 +1,4 @@
+import { toast } from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -16,12 +17,17 @@ const ContactUsForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<ContactUsFormValues>({
     resolver: zodResolver(formSchema.required()),
   });
 
-  const onSubmit = (data: ContactUsFormValues) => console.log(data);
+  const onSubmit = (data: ContactUsFormValues) => {
+    localStorage.setItem('form-feedback', JSON.stringify(data));
+    reset();
+    toast.success('Feedback was sended.');
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={scss.form}>
