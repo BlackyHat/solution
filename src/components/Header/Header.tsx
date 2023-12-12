@@ -8,8 +8,16 @@ import scss from './Header.module.scss';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const onOpen = () => setIsOpen(true);
-  const onClose = () => setIsOpen(false);
+  const onOpen = () => {
+    setIsOpen(true);
+    if (typeof window != 'undefined' && window.document) {
+      document.body.style.overflow = 'hidden';
+    }
+  };
+  const onClose = () => {
+    setIsOpen(false);
+    document.body.style.overflow = 'unset';
+  };
 
   return (
     <>
@@ -18,7 +26,7 @@ const Header = () => {
         <nav>
           <ul className={scss.navList}>
             <li>
-              <button className={scss.btnMenu} onClick={onOpen} />
+              <button type="button" className={scss.btnMenu} onClick={onOpen} />
             </li>
             <li>
               <a href="#contact-us-section" className={scss.btnContact}>

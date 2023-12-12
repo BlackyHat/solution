@@ -24,13 +24,13 @@ const Main = () => {
           <a
             href={`http://maps.google.com/?q=:${CONTACTS_DATA.address}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             {CONTACTS_DATA.address}
           </a>
         </li>
         <li>
-          <a href={`mailto:${CONTACTS_DATA.email}`}> {CONTACTS_DATA.email}</a>
+          <a href={`mailto:${CONTACTS_DATA.email}`}>{CONTACTS_DATA.email}</a>
         </li>
         <li>
           <span className={scss.rights}>{CONTACTS.rights}</span>

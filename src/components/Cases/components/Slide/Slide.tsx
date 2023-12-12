@@ -21,6 +21,7 @@ const Slide: FC<SlideProps> = ({ name, title, desc, date, onClick }) => {
         <div className={scss.labelWrapper}>
           <p className={scss.label}>{title}</p>
           <button
+            type="button"
             title="More details..."
             aria-label="more details"
             className={scss.btnMore}

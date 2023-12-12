@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from 'react';
 import scss from './ResponsiveImg.module.scss';
-import IMG from '@assets/images/slide-1-desktop@2x.webp';
+
 interface LoadImagesProps {
   size: 'mobile' | 'tablet' | 'desktop';
   width: 360 | 768 | 1280;
@@ -83,7 +83,7 @@ const ResponsiveImg: FC<ResponsiveImgProps> = ({ name, alt, className }) => {
           <img
             alt={alt}
             loading="lazy"
-            src={IMG}
+            src={images.jpeg}
             className={`${scss.image} ${className || ''}`}
           />
         </picture>

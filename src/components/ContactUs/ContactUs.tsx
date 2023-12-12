@@ -42,7 +42,7 @@ const ContactUs = () => {
           <a
             href={`http://maps.google.com/?q=:${CONTACTS_DATA.address}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             <MapIcon className={scss.contactIcon} aria-label="map" />
             {CONTACTS_DATA.address}

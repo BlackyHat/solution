@@ -16,20 +16,22 @@ const SocialLinks: FC<SocialLinksProps> = ({
     <ul className={scss.socialList}>
       <li>
         <a
-          href="#"
+          href="https://www.facebook.com/"
           className={`${scss.socialLink} ${scss[color] || ''}`}
           style={Object.assign({}, linkStyle && linkStyle)}
-          rel="noreferrer"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
         >
           <FbIcon className={scss.socialFB} aria-label="facebook" />
         </a>
       </li>
       <li>
         <a
-          href="#"
+          href="https://www.instagram.com/"
           className={`${scss.socialLink} ${scss[color] || ''}`}
           style={Object.assign({}, linkStyle && linkStyle)}
-          rel="noreferrer"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
         >
           <InstaIcon className={scss.socialInsta} aria-label="instagram" />
         </a>
