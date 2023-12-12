@@ -1,6 +1,5 @@
 import { FC, useState, useEffect } from 'react';
 import scss from './ResponsiveImg.module.scss';
-import IMG from '@assets/images/slide-1-desktop@2x.webp';
 interface LoadImagesProps {
   size: 'mobile' | 'tablet' | 'desktop';
   width: 360 | 768 | 1280;
@@ -21,29 +20,25 @@ const ResponsiveImg: FC<ResponsiveImgProps> = ({ name, alt, className }) => {
 
   useEffect(() => {
     async function loadImages({ size, width }: LoadImagesProps) {
-      try {
-        const jpegImg = await import(
-          `../../../assets/images/${name}-${size}@1x.jpg`
-        );
-        const jpegImg2x = await import(
-          `../../../assets/images/${name}-${size}@2x.jpg`
-        );
-        const webPImg = await import(
-          `../../../assets/images/${name}-${size}@1x.webp`
-        );
-        const webP2x = await import(
-          `../../../assets/images/${name}-${size}@2x.webp`
-        );
-        setImages({
-          width: String(width),
-          jpeg: jpegImg?.default,
-          jpeg2x: jpegImg2x?.default,
-          webP: webPImg?.default,
-          webP2x: webP2x?.default,
-        });
-      } catch (error) {
-        console.log(`Mobile Images does not exist ${name}`);
-      }
+      const jpegImg = await import(
+        `../../../assets/images/${name}-${size}@1x.jpg`
+      );
+      const jpegImg2x = await import(
+        `../../../assets/images/${name}-${size}@2x.jpg`
+      );
+      const webPImg = await import(
+        `../../../assets/images/${name}-${size}@1x.webp`
+      );
+      const webP2x = await import(
+        `../../../assets/images/${name}-${size}@2x.webp`
+      );
+      setImages({
+        width: String(width),
+        jpeg: jpegImg?.default,
+        jpeg2x: jpegImg2x?.default,
+        webP: webPImg?.default,
+        webP2x: webP2x?.default,
+      });
     }
 
     if (windowSize < 768) {
@@ -83,7 +78,7 @@ const ResponsiveImg: FC<ResponsiveImgProps> = ({ name, alt, className }) => {
           <img
             alt={alt}
             loading="lazy"
-            src={IMG}
+            src={images.jpeg}
             className={`${scss.image} ${className || ''}`}
           />
         </picture>

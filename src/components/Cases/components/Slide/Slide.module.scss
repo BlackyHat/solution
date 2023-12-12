@@ -2,10 +2,11 @@
 
 .slide {
   overflow: hidden;
-  max-width: 320px;
+  width: 100%;
   & img {
     display: block;
     width: 100%;
+    object-fit: cover;
     height: 168px;
   }
   @media screen and (min-width: 768px) {

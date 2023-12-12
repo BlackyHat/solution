@@ -21,21 +21,30 @@ const Header = () => {
 
   return (
     <>
-      <div className={scss.header}>
-        <Logo />
-        <nav>
-          <ul className={scss.navList}>
-            <li>
-              <button type="button" className={scss.btnMenu} onClick={onOpen} />
-            </li>
-            <li>
-              <a href="#contact-us-section" className={scss.btnContact}>
-                Get in touch
-                <ArrowIcon className={scss.arrowIcon} aria-label="arrow down" />
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div className={scss.container}>
+        <div className={scss.header}>
+          <Logo />
+          <nav>
+            <ul className={scss.navList}>
+              <li>
+                <button
+                  type="button"
+                  className={scss.btnMenu}
+                  onClick={onOpen}
+                />
+              </li>
+              <li>
+                <a href="#contact-us-section" className={scss.btnContact}>
+                  Get in touch
+                  <ArrowIcon
+                    className={scss.arrowIcon}
+                    aria-label="arrow down"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
         {isOpen && <BurgerMenu onClose={onClose} />}

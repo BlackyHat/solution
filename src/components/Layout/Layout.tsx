@@ -9,11 +9,13 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div className={scss.container}>
+    <>
       <Header />
-      <main className={scss.main}>{children}</main>
+      <div className={scss.container}>
+        <main className={scss.main}>{children}</main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
