@@ -1,4 +1,4 @@
-import Logo from '@components/Logo/Logo';
+import LogoIcon from '@assets/icons/logo.svg?react';
 
 import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
 import CONTACTS_DATA from '@/libs/content/contacts';
@@ -10,7 +10,9 @@ const Footer = () => {
   return (
     <div className={scss.container}>
       <footer className={scss.footer}>
-        <Logo />
+        <a href="#" className={scss.logo}>
+          <LogoIcon aria-label="Eco Solution Logo" />
+        </a>
         <a href="#main-section" className={scss.arrowUp}>
           <ArrowIcon aria-label="arrow up" />
         </a>

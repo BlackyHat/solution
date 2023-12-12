@@ -98,3 +98,18 @@
     justify-items: start;
   }
 }
+
+.logo {
+  width: 269px;
+  height: 40px;
+  color: var(--secondary-color);
+  & > svg path[d^='M44.735'] {
+    fill: currentColor;
+    transition: fill var(--transition);
+
+    &:hover,
+    &:focus {
+      fill: var(--primary-color);
+    }
+  }
+}

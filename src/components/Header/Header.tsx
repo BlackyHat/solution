@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import BurgerMenu from '@components/BurgerMenu/BurgerMenu';
-import Logo from '@components/Logo/Logo';
-import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
 
+import BurgerMenu from '@components/BurgerMenu/BurgerMenu';
+import ArrowIcon from '@assets/icons/icon-arrow.svg?react';
+import LogoIcon from '@assets/icons/logo.svg?react';
 import scss from './Header.module.scss';
 
 const Header = () => {
@@ -23,7 +23,9 @@ const Header = () => {
     <>
       <div className={scss.container}>
         <div className={scss.header}>
-          <Logo />
+          <a href="#" className={scss.logo}>
+            <LogoIcon aria-label="Eco Solution Logo" />
+          </a>
           <nav>
             <ul className={scss.navList}>
               <li>
