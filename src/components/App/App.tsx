@@ -17,7 +17,7 @@ function App() {
       <Cases />
       <FAQs />
       <ContactUs />
-      <Toaster />;
+      <Toaster />
     </Layout>
   );
 }
