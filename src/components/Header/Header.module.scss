@@ -104,13 +104,14 @@
   width: 269px;
   height: 40px;
   color: var(--secondary-color);
+  transition: color var(--transition);
   & > svg path[d^='M44.735'] {
     fill: currentColor;
     transition: fill var(--transition);
+  }
 
-    &:hover,
-    &:focus {
-      fill: var(--primary-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--primary-color);
   }
 }
